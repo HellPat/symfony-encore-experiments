@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <article>
+            <h1>Dummy-Inhalt mit Webpack</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+            <button id="button1">Läd "dummy-component"</button><br>
+            <button id="button2">Läd "dummy-component2"</button><br>
+            <button id="button2">Nutzt (schon geladene) "dummy-component3"</button>
+        </article>
+        <aside>
+            <h1>CSS Loaded</h1>
+            <ul>
+                <li id="dummy-component-css-loaded" style="display: none;">dummy-component/index.css</li>
+                <li id="dummy-component-2-css-loaded" style="display: none;">dummy-component2/index.css</li>
+                <li id="dummy-component-3-css-loaded" style="display: none;">dummy-component3/index.css</li>
+                <li id="dummy-component-4-css-loaded" style="display: none;">dummy-component4/index.css</li>
+            </ul>
+        </aside>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,19 @@
+body {
+    background-color: #f6f6f6;
+    font-family: sans-serif;
+    line-height: 1.6;
+    font-size: 19px;
+    color: #232323;
+}
+
+article {
+    max-width: 700px;
+    padding: 20px 40px;
+}
+
+button {
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
