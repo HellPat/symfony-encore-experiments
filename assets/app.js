@@ -24,6 +24,7 @@ document.getElementById('button2').addEventListener('click', function() {
 
 document.addEventListener('DOMContentLoaded', (function() {
   import('./app.css');
+
   import('./dummy-component3/index.js').then(({ default: component }) => {
     component();
   });

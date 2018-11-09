@@ -1,8 +1,12 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
+{% block head %}
     {{ parent() }}
-    {{ encore_entry_link_tags('app') }}
+    <link rel="stylesheet" href="{{ preload(asset('build/header.css'), { as: 'style' }) }}">
+{% endblock %}
+
+{% block header %}
+    {{ parent() }}
 {% endblock %}
 
 {% block javascripts %}
@@ -10,14 +14,14 @@
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
 
-{% block body %}
+{% block content %}
     <div>
         <article>
             <h1>Dummy-Inhalt mit Webpack</h1>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
             <button id="button1">Läd "dummy-component"</button><br>
             <button id="button2">Läd "dummy-component2"</button><br>
-            <button id="button2">Nutzt (schon geladene) "dummy-component3"</button>
+            <button id="button3">Nutzt (schon geladene) "dummy-component3"</button>
         </article>
         <aside>
             <h1>CSS Loaded</h1>
@@ -29,5 +33,4 @@
             </ul>
         </aside>
     </div>
-    
 {% endblock %}

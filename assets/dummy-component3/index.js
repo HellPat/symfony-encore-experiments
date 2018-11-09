@@ -1,5 +1,7 @@
-alert('component 3 loaded, yeah');
+console.log('component 3 loaded, yeah');
+let $ = require('jquery');
 
 export default function () {
-  alert('component 3 used, yeah');
+  $('body').addClass('fooo');
+  console.log('component 3 used, yeah');
 }

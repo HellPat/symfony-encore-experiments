@@ -1,5 +1,5 @@
-alert('component 4 loaded, yeah');
+console.log('component 4 loaded, yeah');
 
 export default function () {
-  alert('component 4 used, yeah');
+  console.log('component 4 used, yeah');
 }
