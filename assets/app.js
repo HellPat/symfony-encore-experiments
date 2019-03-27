@@ -6,6 +6,8 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
+require('./app.css');
+require('./header.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // let $ = require('jquery');

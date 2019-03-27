@@ -18,14 +18,15 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('header', './assets/header.css')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
-    //.enableSingleRuntimeChunk()
+    .enableSingleRuntimeChunk()
 
+    .splitEntryChunks()
+    
     /*
      * FEATURE CONFIG
      *
@@ -37,10 +38,11 @@ Encore
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
+    //.enableVersioning(Encore.isProduction())
+    .enableVersioning()
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader();
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

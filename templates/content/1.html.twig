@@ -2,7 +2,12 @@
 
 {% block head %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ preload(asset('build/header.css'), { as: 'style' }) }}">
+    
+    {% for filePath in encore_entry_css_files('app') %}
+        <link rel="stylesheet" href="{{ preload(filePath) }}">
+    {% endfor %}
+    
+    {#{{ encore_entry_link_tags('app') }}#}
 {% endblock %}
 
 {% block header %}
