@@ -22,6 +22,12 @@ document.getElementById('button2').addEventListener('click', function() {
   });
 });
 
+document.getElementById('button3').addEventListener('click', function() {
+  import('./dummy-component3/index.js').then(({ default: component }) => {
+    component();
+  });
+});
+
 document.addEventListener('DOMContentLoaded', (function() {
   import('./app.css');
 
